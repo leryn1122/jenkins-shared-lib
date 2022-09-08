@@ -52,7 +52,7 @@ is the same.
 > Project Repository: https://github.com/leryn1122/jenkins-shared-lib.git
 >
 
-![](./assets/JenkinsLibraryConfigure.png)
+![img](./assets/JenkinsLibraryConfigure.png)
 
 When configured, import the library in your pipeline through such statement:
 
