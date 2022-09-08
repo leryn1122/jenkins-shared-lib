@@ -1,0 +1,51 @@
+//file:noinspection GroovyAssignabilityCheck
+plugins {
+    id 'groovy'
+}
+
+group 'io.github.leryn'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src'
+            srcDir 'vars'
+        }
+        resources {
+            srcDir 'resources'
+        }
+    }
+    test {
+        groovy {
+            srcDir 'test'
+        }
+    }
+}
+
+configurations {
+    ivy
+}
+
+tasks.withType(GroovyCompile) {
+    groovyClasspath += configurations.ivy
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+
+    implementation 'com.cloudbees:groovy-cps:1.31'
+    implementation 'org.apache.ivy:ivy:2.5.0'
+    testImplementation 'com.lesfurets:jenkins-pipeline-unit:1.1'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnitPlatform()
+}
