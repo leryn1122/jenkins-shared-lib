@@ -6,7 +6,7 @@ Jenkins shared library
 
 Language: Groovy
 
-## Requisite
+## Requisition
 
 ### Develop
 
@@ -50,7 +50,9 @@ is the same.
 > Library Name: jenkins-shared-lib
 > 
 > Project Repository: https://github.com/leryn1122/jenkins-shared-lib.git
-> 
+>
+
+![](./assets/JenkinsLibraryConfigure.png)
 
 When configured, import the library in your pipeline through such statement:
 
@@ -63,3 +65,8 @@ When configured, import the library in your pipeline through such statement:
 Serve for Jenkins pipeline project.
 
 - [Jenkins Pipeline](https://github.com/leryn1122/jenkins-pipeline)
+
+## Reference Docs
+
+- [Jenkins shared library docs](https://www.jenkins.io/doc/book/pipeline/shared-libraries)
+- [JenkinsPipelineUnit - github/jenkinsci](https://github.com/jenkinsci/JenkinsPipelineUnit)
