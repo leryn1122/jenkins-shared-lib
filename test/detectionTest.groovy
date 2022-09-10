@@ -4,18 +4,18 @@ import org.junit.Test
 
 class detectionTest extends BasePipelineTest {
 
-    def detection
+  def detection
 
-    @Before
-    void setUp() {
-        super.setUp()
-        detection = loadScript("vars/detection.groovy")
-    }
+  @Before
+  void setUp() {
+    super.setUp()
+    detection = loadScript("vars/detection.groovy")
+  }
 
-    @Test
-    void detectProjectType() {
-        detection.detectProjectType()
-        printCallStack()
-    }
+  @Test
+  void detectProjectType() {
+    detection.detectProjectType()
+    printCallStack()
+  }
 
 }
