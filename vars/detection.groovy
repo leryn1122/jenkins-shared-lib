@@ -19,8 +19,11 @@ def detectProjectType() {
   ])
 
   projectMappings.each { entry ->
-    if (Paths.get(entry.getValue() as String).toFile().exists()) {
+    File f = Paths.get(entry.getValue() as String).toFile()
+    if (f.exists()) {
       println "This is project organized by: [ " + entry.getKey() + " ]"
+    } else {
+      println f.getName() + " does not exist."
     }
   }
 }
