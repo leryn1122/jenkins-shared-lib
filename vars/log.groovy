@@ -1,9 +1,10 @@
 #!/usr/bin/env groovy
 
 def doColor(message, color) {
-//  ansiColor('xterm') {
+  // `AnsibleColor` plugin required。
+  ansiColor('xterm') {
     println "\033[${color}m${message}\033[0m"
-//  }
+  }
 }
 
 def red(message) {
@@ -22,7 +23,7 @@ def blue(message) {
   doColor(message, "34")
 }
 
-def violet(message) {
+def magenta(message) {
   doColor(message, "35")
 }
 

@@ -11,7 +11,7 @@ Language: Groovy
 ### Develop
 
 - Groovy SDK
-- A preferred IDE (e.g. Jetbrains Intellij.).
+- (*Optional**) A preferred IDE (e.g. Jetbrains Intellij.).
 
 ### Runtime
 
@@ -60,6 +60,24 @@ is the same.
 
 </div>
 </details>
+
+Or using [JCasC (Jenkins Configuration as Code)](https://www.jenkins.io/projects/jcasc/) plugin as followed:
+
+```yaml
+unclassified:
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "jenkins-shared-lib"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              id: "5844ccd2-4580-4e81-ba5b-f63533368fef"
+              remote: "https://github.com/leryn1122/jenkins-shared-lib.git"
+              traits:
+              - "gitBranchDiscovery"
+```
 
 When configured, import the library in your pipeline through such statement:
 

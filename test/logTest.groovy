@@ -14,13 +14,13 @@ class logTest extends BasePipelineTest {
 
   @Test
   void logColorTest() {
-    log.red   ("It is red."   )
-    log.green ("It is green." )
-    log.yellow("It is yellow.")
-    log.blue  ("It is blue."  )
-    log.violet("It is violet.")
-    log.cyan  ("It is cyan."  )
-    log.white ("It is white." )
+    log.red    ("It is red."    )
+    log.green  ("It is green."  )
+    log.yellow ("It is yellow." )
+    log.blue   ("It is blue."   )
+    log.magenta("It is magenta.")
+    log.cyan   ("It is cyan."   )
+    log.white  ("It is white."  )
   }
 
 }
